@@ -1,4 +1,5 @@
 ActiveAdmin.register Fountain do
+  permit_params :location, :photo_uri, :updated_by
 
   
   # See permitted parameters documentation:
