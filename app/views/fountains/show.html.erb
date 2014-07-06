@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @fountain.location %>
+</p>
+
+<p>
+  <strong>Photo uri:</strong>
+  <%= @fountain.photo_uri %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @fountain.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_fountain_path(@fountain) %> |
+<%= link_to 'Back', fountains_path %>

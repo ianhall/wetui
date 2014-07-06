@@ -1,0 +1,29 @@
+<h1>Listing fountains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Photo uri</th>
+      <th>Updated by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fountains.each do |fountain| %>
+      <tr>
+        <td><%= fountain.location %></td>
+        <td><%= fountain.photo_uri %></td>
+        <td><%= fountain.updated_by %></td>
+        <td><%= link_to 'Show', fountain %></td>
+        <td><%= link_to 'Edit', edit_fountain_path(fountain) %></td>
+        <td><%= link_to 'Destroy', fountain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fountain', new_fountain_path %>
